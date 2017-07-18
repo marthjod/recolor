@@ -7,24 +7,23 @@ import (
 	"regexp"
 )
 
-
 func main() {
 	var (
 		replacements = []struct {
 			regex *regexp.Regexp
-			repl string
-		} {
+			repl  string
+		}{
 			{
 				regex: regexp.MustCompile(`\[(3[1-8])m`),
-				repl: "\033[${1}m",
+				repl:  "\033[${1}m",
 			},
 			{
-				regex: regexp.MustCompile(`\[0m`)	,
-				repl: "\033[0m",
+				regex: regexp.MustCompile(`\[0m`),
+				repl:  "\033[0m",
 			},
 			{
 				regex: regexp.MustCompile(`\[39m`),
-				repl: "",
+				repl:  "",
 			},
 		}
 	)
