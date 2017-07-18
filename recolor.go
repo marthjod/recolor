@@ -14,12 +14,8 @@ func main() {
 			repl  string
 		}{
 			{
-				regex: regexp.MustCompile(`\[(3[1-8])m`),
+				regex: regexp.MustCompile(`\[(3[1-8]|0)m`),
 				repl:  "\033[${1}m",
-			},
-			{
-				regex: regexp.MustCompile(`\[0m`),
-				repl:  "\033[0m",
 			},
 			{
 				regex: regexp.MustCompile(`\[39m`),
